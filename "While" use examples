@@ -1,0 +1,62 @@
+"""
+example using while
+"""
+
+#display numbers from 1 to 10:
+#for i in range (1,11):
+i=1
+while i <=10:
+print(i)
+i+=1
+
+#display even numbers from 1 to 20
+i=2
+while i <= 20:
+print (i)
+i+=2
+
+#display odd numbers from 1 to 20
+i=1
+while i <= 20:
+print (i)
+i+=2
+
+#request a number to do the multiplication table
+num=int(input("Enter a number:"))
+i=1
+while i <=10:
+print(f"{num}x{i}x{num*i}")
+i+=1
+
+#calculate the sum of numbers from 1 to 100:
+sum=0
+i=1
+while i <=100:
+sum+=i
+i+=1
+print(f"Sum: {sum} and counter: {i}")
+#sequence of numbers from 10 to 1 decreasing
+i=10
+while i >=1:
+print(i)
+i-=1
+
+#Display the characters of a string:
+word=input("Enter a word:")
+i=0
+counter=0
+while i <len(word):
+print(word[i])
+i+=1
+counter+=1
+print(f"The amount: {counter}")
+
+#count the number of vowels in a string:
+word=input("Enter a word:").lower()
+vowels="aeiou"
+count=0
+i=0
+while i < len(word):
+if word[i] in vowels:
+count+=1
+print(f"Number of vowels: {count}")

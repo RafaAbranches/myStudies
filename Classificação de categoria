@@ -1,0 +1,28 @@
+""" Develop an algorithm that, given the age of a swimmer, classifies him/her into one of the following categories:
+
+Child A = 5 to 7 years
+Child B = 8 to 11 years
+Youth A = 12 to 13 years
+Youth B = 14 to 17 years
+Adults = Over 18 years
+
+Write a program that asks the user for two numbers (with decimals) Then
+ask the user to enter the mathematical operation (addition, subtraction, multiplication and
+division)"""
+
+#Request Swimmer's Age
+age=int(input("Enter Swimmer's Age"))
+
+#Check Swimmer's Category
+if age>=5 and age<=7:
+print("Children A")
+elif age>=8 and age<=11:
+print("Children B")
+elif age>=12 and age<=13:
+print("Youth A")
+elif age>=14 and age<=17:
+print("Youth B")
+elif age<5:
+print("No Category")
+else:
+print("Adults")

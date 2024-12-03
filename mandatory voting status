@@ -1,0 +1,19 @@
+"""
+Calculate the mandatory voting status for a person
+depending on their age:
+
+(16, 18 and 70) - voting is optional:
+over 16 and under 18;
+over or equal to 70.
+"""
+
+#request the person's age
+
+age=int(input("Enter your age:"))
+#checking the mandatory voting status
+if age<16:
+print("You are not old enough to vote")
+elif 16 <= age <=17 or age >=70:
+print("Voting is optional")
+else:
+print("Voting is mandatory")

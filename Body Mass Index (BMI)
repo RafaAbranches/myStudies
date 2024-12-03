@@ -1,0 +1,23 @@
+"""
+Write a program that calculates the Body Mass Index (BMI)
+bmi=weight/(height^2)
+"""
+
+#weight and height of the person
+weight=float(input("Enter your weight in Kg:"))
+height=float(input("Enter your height in meters:"))
+bmi=weight/(height**2)#bmi
+
+#display the BMI
+print(f"Your BMI is:{bmi:.2f}")
+
+#BMI Index with IF
+
+if bmi <18.5:#BMI assessment
+print("Underweight")
+elif 18.6<= bmi <=24.9:
+print("Normal Weight")
+elif 25<= bmi <=29.9:
+print("Overweight")
+else:
+print("Obesity")

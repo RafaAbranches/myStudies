@@ -1,0 +1,28 @@
+#random number guessing game using DEF
+
+#import random
+import random
+
+#function generate number
+def secret_number():
+return random.randint(1,101)#generate number from 1 to 100
+
+#def guess number
+def guess_number():
+secret=secret_number()#generate secret number from function
+guesses=0#counter of guesses
+#program loop
+while True:
+guess=int(input("Enter your guess from 1 to 100"))
+guesses+=1
+
+#if check guess
+if guess == secret:
+print(f"You guessed the secret number: {secret}")
+print(f"Number of guesses: {try}")
+break#close the loop
+elif guess < secret:
+print ("The number is bigger")
+else:
+print ("The number is smaller.")
+guess_number()#close function

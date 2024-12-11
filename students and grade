@@ -1,0 +1,32 @@
+'''
+Create lists, tuples and dictionaries
+to store student information and their
+respective grades. And display their average
+'''
+#empty list to store the students
+students=[]
+#program loop to add name and grades
+while True:
+name=input("Student name or 's' to exit:").lower()
+if name=="s":
+print("Exiting the program.")
+break
+#input the grades and store them in tuples
+grades=(
+float(input(f"Enter grade 1 for {name}")),
+float(input(f"Enter grade 2 for {name}")),
+float(input(f"Enter grade 3 for {name}"))
+)
+#dictionary to store the registration
+registration={
+"name":name,
+"grades":grades,
+"average":sum(grades)/len(grades)
+}
+#add the registration to the list of students
+students.append(registration)
+#display the registration
+print(f"Registered students: {students}")
+for i in students:
+print(f"Name:{i["name"]},Grades:{i["grades"]},\
+Average:{i["average"]}")

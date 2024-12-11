@@ -1,0 +1,24 @@
+'''""
+Lesson_09 List, Tuples and Dictionary Continued....Done in the classroom. """
+
+4. Make a list of the months of the year. And a list of
+the temperature of each month
+In which months was the average temperature higher
+than the national average?
+'''
+#list=[]
+#tuple=()
+#dictionary={}
+#list of months and temperatures
+months=["January","February","March","April","May","June",
+"July","August","September","October","November","December"]
+temperatures=[30,29,28,28,25,26,20,21,19,25,27,32]
+#national average
+average=sum(temperatures)/len(temperatures)
+print(f"Annual average {average:.2f}")
+#checking loop
+#enumerate, number the elements in a sequence
+#enumerate our list and compare
+for i,month in enumerate(months):
+if temperatures[i]>average:
+print(f"Months above are:{month}:{temperatures[i]}")

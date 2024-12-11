@@ -1,0 +1,34 @@
+"""
+Make a program that asks the user for a number that he wants to practice the multiplication table with. You will ask him for the answer by calculating the number given multiplied by 1, 2 up to 10.
+"""
+For each answer you must validate and print: "CORRECT" or "TOO BAD, YOU GOT IT WRONG, THE CORRECT VALUE IS X", in place of "X" put the correct value. At the end print "Total correct answers: y" and "Total errors z", where "y" should be the total correct answers and "z" the total errors. """
+
+def train_timestable():
+# Ask the user for the number to practice the multiplication table
+number = int(input("Enter the number you want to practice the multiplication table with: "))
+
+# Variables to count hits and misses
+total_hits = 0
+total_misses = 0
+
+# Loop to perform calculations from 1 to 10
+for i in range(1, 11):
+# Ask the user for the answer
+answer = int(input(f"What is {number} x {i}? "))
+
+# Calculate the correct value
+correct_value = number * i
+
+# Validate the answer and provide feedback
+if answer == correct_value:
+print("CORRECT!")
+total_hits += 1
+else:
+print(f"TOO MUCH, YOU GOT IT WRONG, THE CORRECT VALUE IS {correct_value}.") total_errors += 1
+
+# Prints the summary of hits and errors
+print(f"\nTotal hits: {total_hits}")
+print(f"Total errors: {total_errors}")
+
+# Calls the function
+treinar_tabuada()

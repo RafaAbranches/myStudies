@@ -1,0 +1,35 @@
+5. Write a program that loads a list with the models of four cars (example models: FUSCA, GOL, VECTRA, etc.). Load another list with the consumption of these cars, that is, how many kilometers each of these cars travels with one liter of fuel. Calculate and display: a. The most economical car model; b. How many liters of fuel each of the registered cars consumes to travel a distance of 1000 kilometers and how much this will cost, considering that gasoline costs R$ 6.10 per liter. Below is an example screen. The information should be arranged as close as possible to the example. The data is fictitious and may change each time the program is run. ```
+Fuel Consumption Comparison
+
+Vehicle 1
+Name: Beetle
+Km per liter: 7
+Vehicle 2
+Name: Gol
+Km per liter: 10
+Vehicle 3
+Name: Uno
+Km per liter: 12.5
+Vehicle 4
+Name: Vectra
+Km per liter: 9
+'''
+#print with program information. print("Fuel consumption comparison.")
+#vehicle list
+#empty list
+#input to add vehicle
+#input to add range
+vehicles=["fusca","gol","uno","vectra"]
+range=[7,10,12.5,9]
+#print informational
+print(vehicles)
+print("Consumption report.")
+#verification loop
+for i,range in enumerate(ranges):
+print(f"Name:{vehicles[i]} range:{range}KM/L\
+range 1000.KM:{1000/range:.2f}L \
+Cost:R${1000/range*6.10:.2f}")
+#more economical
+higher=max(ranges)
+x=ranges.index(higher)
+print(f"The lowest consumption is of:{vehicles[x]}")

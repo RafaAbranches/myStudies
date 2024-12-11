@@ -1,0 +1,44 @@
+"""
+Write a program that reads 5 numbers and reports the sum and average of the numbers:
+"""
+
+print("Enter a number")
+#ask the user for three grades
+number1=float(input("Enter the first number:"))
+number2=float(input("Enter the second number:"))
+number3=float(input("Enter the third number:"))
+number4=float(input("Enter the fourth number:"))
+number5=float(input("Enter the fifth number:"))
+#calculate the average
+sum=(number1+number2+number3+number4+number5)
+average=(number1+number2+number3+number4+number5)/5
+#display the result
+print(f"The sum of the numbers is:{sum:.2f}")
+print(f"The average of the numbers is:{average:.2f}")
+
+#counter sum and quantity of 5 times
+sum=0
+counter=0
+#while loop to read 5 numbers
+while counter <5:
+#input of numbers
+number=float(input("Enter the number"))
+sum += number
+counter += 1
+#calculate the average
+average = sum/5
+#output of data
+print(f"The Sum is {sum} and the average is {average}")
+
+#for
+#counter sum and quantity of 5 times
+sum=0
+#while loop to read 5 numbers
+for i in range (5):
+#input of numbers
+number=float(input("Enter the number"))
+sum += number
+#calculate the average
+average = sum/5
+#output of data
+print(f"The Sum is {sum} and the Average is {average}")

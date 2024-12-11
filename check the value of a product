@@ -1,0 +1,22 @@
+'''
+Create a dictionary with products and prices
+and check the value of the product by typing its name.
+'''
+#product dictionary
+price={
+"cell phone":1500,
+"camera":1000,
+"monitor":2000,
+"mouse":150,
+}
+#loop to search for the product.
+while True:
+search=input("Enter the product or 's' to exit").lower()
+#if to exit the program
+if search =="s":
+print("exiting the program.")
+break
+#to find the price and the product.
+elif search in price:
+value=price[search]
+print(f"The product:{search}, price:R${value}")

@@ -1,0 +1,12 @@
+#get the dollar quote
+cotacao_dolar=dados["rates"]["BRL"]#search for rate and currency
+print(f"Dollar quote of the day: {cotacao_dolar}")
+
+#request the amount in reais
+quantidade_real=float(input("Enter the amount in R$:"))
+
+#convert to dollars
+valor_dolar=quantidade_real/cotacao_dolar
+
+#display the result
+print(f"The amount in dollars is: ${valor_dolar}")

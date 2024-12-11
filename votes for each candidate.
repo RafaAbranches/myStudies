@@ -1,0 +1,61 @@
+"""
+In an election there are three candidates:
+Write a program that asks for the total number of voters. Ask each voter to vote and at the end
+show the number of votes for each candidate.
+"""
+#counter candidate 1
+#counter candidate 2
+#counter candidate 3
+##counter total_voters
+#input voters ("Enter the total number of voters")
+#while total_voters < voters:
+#vote=input("Enter your vote:")
+#with while
+#counters
+candidate1=0
+candidate2=0
+candidate3=0
+#input total voters
+total_voters=int(input("Enter the total number of voters"))
+processed_voters=0
+#loop for vote
+while processed_voters < total_voters:
+print("Voting option:")
+print("candidate A vote: 1")
+print("candidate B vote: 2")
+print("candidate C vote: 3")
+vote=int(input("Enter your vote"))
+if vote==1:
+candidate1+=1
+elif vote==2:
+candidate2+=1
+elif vote==3:
+candidate3+=1
+else:
+print("invalid vote! try again")
+continue #continue and don't lose your vote
+processed_voters+=1
+print("Voting result:")
+print(f"Candidate A: {candidate1} Votes")
+print(f"Candidate B: {candidate2} Votes")
+print(f"Candidate C: {candidate3} Votes")
+total_voters=int(input("Enter the total number of voters"))
+for i in range (total_voters):
+print("Voting option:")
+print("candidate A vote: 1") print("candidate B vote: 2")
+print("candidate C vote: 3")
+vote=int(input("Enter your vote"))
+if vote==1:
+candidate1+=1
+elif vote==2:
+candidate2+=1
+elif vote==3:
+candidate3+=1
+else:
+print("invalid vote! try again")
+continue #continue and don't lose your vote
+total_voters+=1
+print("Voting result:")
+print(f"Candidate A: {candidate1} Votes")
+print(f"Candidate B: {candidate2} Votes")
+print(f"Candidate C: {candidate3} Votes")

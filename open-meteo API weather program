@@ -1,0 +1,18 @@
+'''
+query the weather using open-meteo API
+weather program
+'''
+
+import requests
+#api url
+url="https://api.open-meteo.com/v1/forecast?latitude=-23.5192&longitude=-46.6506122&current_weather=true&quot;"
+# make the request
+response=requests.get(url)
+#resonse error
+response.raise_for_status()
+#convert to json
+data=response.json()
+#extract the current temperature
+temperature=data["current_weather"]["temperature"]
+#extract the current temperature
+print(f"The current temperature is {temperature}°C")

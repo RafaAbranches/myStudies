@@ -1,0 +1,38 @@
+"""
+Enter numbers and print the triple of each number.
+"""
+
+The program ends when the
+number is entered: 999.
+"""
+#loop program
+while True:
+#request the number
+number=int(input("Enter a number or 999 to exit"))
+#check if the user wants to end
+if number ==999:
+print("Ending the program")
+break
+#calculate the triple
+triple=number*3
+print(f"the triple of {number} is {triple}")
+if triple ==999:
+print("Ending the program")
+break
+#same example with for
+#maximum number of attempts
+#necessary adjustment the "for" needs to be defined in range
+attempts=10
+#loop
+for i in range(attempts):
+number1=int(input("Enter the number or 999 to exit."))
+#check if the user wants to exit
+if number1 == 999:
+print("Ending the program")
+break
+#calculate the triple
+triple=number1*3
+print(f"the triple of {number1} is {triple}")
+if triple == 999:
+print("Ending the program")
+break

@@ -1,0 +1,35 @@
+"""
+1. Enter the gender of several people and print
+how many people are male
+(consider m or M)
+"""
+
+#initialize the male and female counters
+male=0
+female=0
+total_general=0
+#program loop
+while True:
+#ask the user to enter the person's gender
+type=input("Enter the person's gender (M/F) or s to exit")
+#check what the user entered
+if type.lower()=="s":
+print("Closing the Program")
+break
+elif type.lower()=="m":
+male+=1
+elif type.lower()=="f":
+female +=1
+elif type.lower()=="f" or type.lower()=="m":
+total_general+=1
+else:
+print("Entry invalid. Please try again.")
+continue
+overall=male+female
+#display total
+print(f"Total male:{male}")
+print(f"Total female:{female}")
+#display total person
+print(f"Grand total 1:{male + female}")
+print(f"Grand total 2 {overall}")
+print(f"Grand total 3 {overall_total}")

@@ -1,0 +1,243 @@
+#1° validar o nome do aluno.
+def validar_nome():
+    while True:
+        nome=input("Digite nome e sobrenome do aluno: ")
+        if len(nome) >=5:
+            return nome
+        else:
+            print("Nome inválido")
+#2° validar a nota
+def validar_notas():
+    notas=[]#lista para armazenar as notas
+    #loop em for para 2 notas
+    for i in range(1,3):#exemplo de 2 notas
+        while True:
+            nota=float(input(
+            f"Digite a nota:{i} entre 0 e 10:"
+            ))            
+            if nota ==0 or nota <=10:#if para validar a nota de 0 a 10
+                notas.append(nota)#add a lista de notas[]
+                break
+            else:
+                print("Nota inválida.")
+    return notas
+#3°função calcular a média e verificar a situação
+def calcular_media(notas):
+    #calcular média e situação
+    media=sum(notas)/len(notas)
+    situacao="Aprovado" if media >=6 else "Reprovado"
+    return media,situacao
+#4°função cadastrar alunos
+def cadastrar_alunos(alunos):
+    #loop de cadastro
+    while True:
+        nome=validar_nome()#chamar a função
+        notas=validar_notas()
+        media,situacao=calcular_media(notas)
+        #add cadastro em um dicionário
+        alunos.append({
+            'nome':nome,
+            'notas':notas,
+            'media':media,
+            'situacao':situacao
+        })
+        continuar=input(
+        "Digite 's' para sair ou enter para continuar"
+        ).lower()
+        if continuar =='s':
+            print("fechando")
+            break
+#5° função de exibir os alunos cadastrados
+def exibir_alunos(alunos):
+    if not alunos:
+        print("Nenhum aluno cadastrado")
+    else:
+        for aluno in alunos:
+            print(f"Nome: {aluno['nome']}")
+            print(f"Notas: {aluno['notas']}")
+            print(f"Média: {aluno['media']}")
+            print(f"Situação: {aluno['situacao']}")
+#6°função editar aluno já cadastrado
+def editar_aluno(alunos):
+    nome=input("Digite o nome do aluno para editar").lower()
+    for aluno in alunos:#loop de verificação para editar o aluno
+        if aluno['nome'].lower() ==nome:
+            print(f"Notas atuais: {aluno['notas']}")
+            novas_notas=validar_notas()
+            media,situacao=calcular_media(novas_notas)
+            aluno['notas']=novas_notas
+            aluno['media']=media
+            aluno['situacao']=situacao
+            print(
+            f"Notas de {aluno['nome']} atualizado")
+            return
+    print(f"Anulo{nome} não foi encontrado")
+#7° função para exibir a situação
+# = filtro aprovado e reprovado
+def exibir_aluno_situacao(alunos,situacao):
+    #lista para conter a situação do aluno
+    filtros=[
+        #loop de exibição na vertical do aluno
+        aluno for aluno in alunos
+        #if para situação
+        if aluno['situacao'].lower()==situacao.lower()]
+    if not filtros:#if para exibir a situação do aluno
+        print(f"Nenhum aluno encontrado {situacao.lower()}")
+    else:
+        for aluno in filtros:
+            print(
+    f"Nome:{aluno['nome']},Situação:{aluno['situacao']}")
+#8° função exibir o menu interativo
+def menu():
+    print("Menu de Opções:")
+    print("1-Cadastrar alunos.")
+    print("2-Exibir todos os alunos.")
+    print("3-Editar notas de um aluno")
+    print("4-Exibir alunos 'Aprovados'")
+    print("5-Exibir alunos 'Reprovados'")
+    print("6-Sair do sistema")
+    opcao=int(input("Escolha uma opção"))
+    return opcao
+#9° fução principal
+def main():
+    alunos=[]#adicionar a opção do menu
+    while True:#loop de escolha do menu
+        opcao=menu()
+        if opcao ==1:
+            cadastrar_alunos(alunos)
+        elif opcao ==2:
+            exibir_alunos(alunos)
+        elif opcao ==3:
+            editar_aluno(alunos)
+        elif opcao ==4:
+            exibir_aluno_situacao(alunos,"Aprovado")
+        elif opcao ==5:
+            exibir_aluno_situacao(alunos,"Reprovado")
+        elif opcao ==6:
+            print("Saindo do sistema.")
+            break
+        else:
+            print("opção invalida.")
+if __name__=="__main__":
+    main()#1° validar o nome do aluno.
+def validar_nome():
+    while True:
+        nome=input("Digite nome e sobrenome do aluno: ")
+        if len(nome) >=5:
+            return nome
+        else:
+            print("Nome inválido")
+#2° validar a nota
+def validar_notas():
+    notas=[]#lista para armazenar as notas
+    #loop em for para 2 notas
+    for i in range(1,3):#exemplo de 2 notas
+        while True:
+            nota=float(input(
+            f"Digite a nota:{i} entre 0 e 10:"
+            ))            
+            if nota ==0 or nota <=10:#if para validar a nota de 0 a 10
+                notas.append(nota)#add a lista de notas[]
+                break
+            else:
+                print("Nota inválida.")
+    return notas
+#3°função calcular a média e verificar a situação
+def calcular_media(notas):
+    #calcular média e situação
+    media=sum(notas)/len(notas)
+    situacao="Aprovado" if media >=6 else "Reprovado"
+    return media,situacao
+#4°função cadastrar alunos
+def cadastrar_alunos(alunos):
+    #loop de cadastro
+    while True:
+        nome=validar_nome()#chamar a função
+        notas=validar_notas()
+        media,situacao=calcular_media(notas)
+        #add cadastro em um dicionário
+        alunos.append({
+            'nome':nome,
+            'notas':notas,
+            'media':media,
+            'situacao':situacao
+        })
+        continuar=input(
+        "Digite 's' para sair ou enter para continuar"
+        ).lower()
+        if continuar =='s':
+            print("fechando")
+            break
+#5° função de exibir os alunos cadastrados
+def exibir_alunos(alunos):
+    if not alunos:
+        print("Nenhum aluno cadastrado")
+    else:
+        for aluno in alunos:
+            print(f"Nome: {aluno['nome']}")
+            print(f"Notas: {aluno['notas']}")
+            print(f"Média: {aluno['media']}")
+            print(f"Situação: {aluno['situacao']}")
+#6°função editar aluno já cadastrado
+def editar_aluno(alunos):
+    nome=input("Digite o nome do aluno para editar").lower()
+    for aluno in alunos:#loop de verificação para editar o aluno
+        if aluno['nome'].lower() ==nome:
+            print(f"Notas atuais: {aluno['notas']}")
+            novas_notas=validar_notas()
+            media,situacao=calcular_media(novas_notas)
+            aluno['notas']=novas_notas
+            aluno['media']=media
+            aluno['situacao']=situacao
+            print(
+            f"Notas de {aluno['nome']} atualizado")
+            return
+    print(f"Anulo{nome} não foi encontrado")
+#7° função para exibir a situação
+# = filtro aprovado e reprovado
+def exibir_aluno_situacao(alunos,situacao):
+    #lista para conter a situação do aluno
+    filtros=[
+        #loop de exibição na vertical do aluno
+        aluno for aluno in alunos
+        #if para situação
+        if aluno['situacao'].lower()==situacao.lower()]
+    if not filtros:#if para exibir a situação do aluno
+        print(f"Nenhum aluno encontrado {situacao.lower()}")
+    else:
+        for aluno in filtros:
+            print(
+    f"Nome:{aluno['nome']},Situação:{aluno['situacao']}")
+#8° função exibir o menu interativo
+def menu():
+    print("Menu de Opções:")
+    print("1-Cadastrar alunos.")
+    print("2-Exibir todos os alunos.")
+    print("3-Editar notas de um aluno")
+    print("4-Exibir alunos 'Aprovados'")
+    print("5-Exibir alunos 'Reprovados'")
+    print("6-Sair do sistema")
+    opcao=int(input("Escolha uma opção"))
+    return opcao
+#9° fução principal
+def main():
+    alunos=[]#adicionar a opção do menu
+    while True:#loop de escolha do menu
+        opcao=menu()
+        if opcao ==1:
+            cadastrar_alunos(alunos)
+        elif opcao ==2:
+            exibir_alunos(alunos)
+        elif opcao ==3:
+            editar_aluno(alunos)
+        elif opcao ==4:
+            exibir_aluno_situacao(alunos,"Aprovado")
+        elif opcao ==5:
+            exibir_aluno_situacao(alunos,"Reprovado")
+        elif opcao ==6:
+            print("Saindo do sistema.")
+            break
+        else:
+            print("opção invalida.")
+if __name__=="__main__":
+    main()

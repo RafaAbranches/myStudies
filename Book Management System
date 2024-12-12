@@ -1,0 +1,32 @@
+Book Management System
+
+class Book:
+def __init__(self,title,author,year):
+self.title=title#title attribute
+self.author=author#author attribute
+self.year=year=year#year attribute
+def display_detail(self):
+print(f"Title:{self.title}.")
+print(f"Author:{self.author}.")
+print(f"Year:{self.year}.")
+#class library
+class Library:
+def __init__(self):
+self.books=[]#empty library list
+#def to add books to list
+def add_book(self,book):
+self.books.append(book)#add to list of books
+#def to display
+def list_books(self):
+print("Books in library.")
+for i in self.books:#for to display vertically
+i.show_detail()
+#create some books
+book1=Book("The Lord of the Rings","J.R.R Tolkien",1955)
+book2=Book("The Hobbit","J.R.R Tolkien",1937)
+#call the class to add books to the list
+library=Library()
+library.add_book(book1)
+library.add_book(book2)
+#call the list of books to display.
+library.list_books()

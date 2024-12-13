@@ -7,39 +7,39 @@ class ViagemClass:
 
 #file 2
 
-#import do Viagem class
+#import from Viagem class
 from viagemClass import ViagemClass
-#criar lugares da viagem
+#create travel locations
 viagem_0=ViagemClass("Paris")
-viagem_1=ViagemClass("Havaí")
-viagem_2=ViagemClass("Japão")
-viagem_3=ViagemClass("Tailândia")
-viagem_4=ViagemClass("Londres")
-#print do inicio do sistema
-print("Bem vindo, xpto vigens.")
-viajante=input("Digite o seu nome:")
+viagem_1=ViagemClass("Hawaii")
+viagem_2=ViagemClass("Japan")
+viagem_3=ViagemClass("Thailand")
+viagem_4=ViagemClass("London")
+#print from the start of the system
+print("Welcome, xpto vigens.")
+viajante=input("Enter your name:")
 print(
-    f"{viajante} temos 5 destinos para você:"
-      '''
-      0- Paris
-      1- Havaí
-      2- Japão
-      3- Tailândia
-      4- Londres''')
+f"{viajante} we have 5 destinations for you:"
+'''
+0- Paris
+1- Hawaii
+2- Japan
+3- Thailand
+4- London''')
 selecao=int(input(
-    "Selecione o número da viagem que deseja"))
-#criar uma lista das viagens
+"Select the number of the trip you want"))
+#create a list of trips
 lista_viagem=[
-    viagem_0,
-    viagem_1,
-    viagem_2,
-    viagem_3,
-    viagem_4
+viagem_0,
+viagem_1,
+trip_2,
+trip_3,
+trip_4
 ]
-while True:#loop do sistema
-    if 0 <= selecao <len(lista_viagem):
-        print(
-f"{viajante}, sua viagem {lista_viagem[selecao].destino}")
-        break
-    else:
-        print("opção invalida.")
+while True:#system loop
+if 0 <= selection <len(trip_list):
+print(
+f"{traveler}, your trip {trip_list[selection].destination}")
+break
+else:
+print("invalid option.")

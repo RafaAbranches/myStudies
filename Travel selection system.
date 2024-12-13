@@ -1,0 +1,45 @@
+#file 1
+
+#class viagem
+class ViagemClass:
+    def __init__(self,destino):
+        self.destino=destino#atributo
+
+#file 2
+
+#import do Viagem class
+from viagemClass import ViagemClass
+#criar lugares da viagem
+viagem_0=ViagemClass("Paris")
+viagem_1=ViagemClass("Havaí")
+viagem_2=ViagemClass("Japão")
+viagem_3=ViagemClass("Tailândia")
+viagem_4=ViagemClass("Londres")
+#print do inicio do sistema
+print("Bem vindo, xpto vigens.")
+viajante=input("Digite o seu nome:")
+print(
+    f"{viajante} temos 5 destinos para você:"
+      '''
+      0- Paris
+      1- Havaí
+      2- Japão
+      3- Tailândia
+      4- Londres''')
+selecao=int(input(
+    "Selecione o número da viagem que deseja"))
+#criar uma lista das viagens
+lista_viagem=[
+    viagem_0,
+    viagem_1,
+    viagem_2,
+    viagem_3,
+    viagem_4
+]
+while True:#loop do sistema
+    if 0 <= selecao <len(lista_viagem):
+        print(
+f"{viajante}, sua viagem {lista_viagem[selecao].destino}")
+        break
+    else:
+        print("opção invalida.")

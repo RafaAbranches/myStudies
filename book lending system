@@ -1,0 +1,33 @@
+#file 1
+
+#class Biblioteca:
+    def __init__(self,emprestimo):
+        self.emprestimo=emprestimo
+
+#file2
+
+#import the library class
+from Library import Library
+#sys system-specific parameters and functions
+#sys for exit to exit the system
+import sys
+book0=Library ("The Lord of the Rings")
+book1=Library("The Hobbit")
+#system initial print
+print("Welcome to the XPTO library.")
+user=input("Enter your name:")
+print(f"Welcome to the xpto library: {user}."
+"""
+Book options;
+0-The Lord of the Rings
+1-The Hobbit""")
+selection=int(input("Select the number of the book you want"))
+#book list
+book_list=[book0,book1]
+while True:
+if 0 <= selection <len(book_list):
+print(
+f"{user}, the book is {list_books[selection].loan}")
+sys.exit()
+else:
+print("Invalid option.")
